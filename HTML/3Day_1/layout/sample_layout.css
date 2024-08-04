@@ -1,0 +1,170 @@
+/* 모든 요소의 기본 마진과 패딩을 0으로 설정 */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /* ul 요소의 기본 리스트 스타일을 제거 */
+  ul {
+    list-style: none;
+  }
+  /* a 요소의 기본 텍스트 장식을 제거하고 글씨 색상을 검정으로 설정 */
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* 전체 페이지를 감싸는 랩퍼 */
+  #wrap {
+    width: 100%;
+  }
+  
+  /* 헤더 섹션 */
+  header {
+    width: 100%;
+    height: 100px;
+    background-color: palegoldenrod;
+    float: left;
+  }
+  
+  /* 헤더 내부의 랩퍼 */
+  #in_header {
+    width: 1200px;
+    height: 100%;
+    background-color: orange;
+    margin: 0 auto; /* 가운데 정렬 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    font-size: 20px; /* 글자 크기 */
+    font-weight: 900; /* 글자 두께 */
+    line-height: 100px; /* 줄 높이 */
+  
+    /* font 축약형
+      font: 두께 크기/line-height '글씨체';
+      (크기랑 글씨체는 반드시 들어가야 함) */
+    /* font: 900 20px/100px '글꼴'; */
+  }
+  
+  /* 로고 영역 */
+  #logo {
+    width: 200px;
+    height: 100px;
+    background-color: aliceblue;
+    float: left;
+  }
+  
+  /* 네비게이션 바 (GNB) */
+  #gnb {
+    width: 900px;
+    height: 100%;
+    background-color: aliceblue;
+    float: right;
+  }
+  /* GNB 내부의 리스트 아이템 */
+  #gnb > li {
+    width: 20%;
+    height: 100%;
+    float: left;
+  }
+  
+  /* 헤더 끝 */
+  
+  /* 첫 번째 섹션 */
+  #section_1 {
+    width: 100%;
+    height: 400px;
+    background-color: papayawhip;
+    float: left;
+  }
+  
+  /* 첫 번째 섹션 끝 */
+  
+  /* 두 번째 섹션 */
+  #section_2 {
+    width: 100%;
+    background-color: palegoldenrod;
+    float: left;
+    padding: 50px 0; /* 위아래 여백 50px */
+  }
+  /* 두 번째 섹션 내부의 컨테이너 */
+  .container {
+    width: 1200px;
+    height: 100%;
+    background-color: paleturquoise;
+    margin: 0 auto; /* 가운데 정렬 */
+    overflow: hidden;
+  }
+  /* 원형 요소 */
+  .circle {
+    width: 262.5px;
+    height: 262.5px;
+    border: 1px solid black;
+    box-sizing: border-box; /* 박스 크기를 border를 포함하여 계산 */
+    border-radius: 50%; /* 원형으로 만들기 */
+    float: left;
+    margin-right: 50px; /* 오른쪽 여백 50px */
+  }
+  
+  /* 마지막 원형 요소는 오른쪽 여백 제거 */
+  .circle:last-child {
+    margin-right: 0;
+  }
+  /* 두 번째 섹션 끝 */
+  
+  /* 세 번째 섹션 */
+  #section_3 {
+    width: 100%;
+    height: 1700px;
+    background-color: aliceblue;
+    float: left;
+    padding-bottom: 50px;
+  }
+  /* 세 번째 섹션 내부의 컨텐츠 랩퍼 */
+  .con_wrap {
+    width: 386.666px;
+    height: 100%;
+    background-color: aqua;
+    float: left;
+    margin-right: 20px;
+  }
+  /* 마지막 컨텐츠 랩퍼는 오른쪽 여백 제거 */
+  .con_wrap:last-child {
+    margin-right: 0;
+  }
+  
+  /* 컨텐츠 랩퍼 내부의 리스트 아이템 */
+  .con_wrap > li {
+    width: 100%;
+    height: 500px;
+    background-color: palegreen;
+  }
+  
+  /* 긴 박스 스타일 */
+  .con_wrap > .long_box {
+    width: 600px;
+    background-color: rgb(255, 255, 149);
+  }
+  /* 여백을 가진 박스 스타일 */
+  .m_box {
+    margin: 50px 0; /* 위아래 여백 50px */
+  }
+  
+  /* 세 번째 섹션 끝 */
+  
+  /* 상단 버튼 */
+  #top_btn {
+    width: 50px;
+    height: 50px;
+    background-color: palevioletred;
+    position: fixed; /* 페이지 스크롤과 무관하게 고정 위치 */
+    bottom: 100px; /* 화면 하단에서 100px 위 */
+    right: 100px; /* 화면 오른쪽에서 100px 왼쪽 */
+    font: 900 20px/50px ''; /* 글꼴 스타일 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+  }
+  
+  /* 상단 버튼 링크를 블록 요소로 설정 */
+  #top_btn a {
+    display: block;
+  }
+  
+  /* 상단 버튼 끝 */
+  

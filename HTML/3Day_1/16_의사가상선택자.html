@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의사(가상)선택자</title>
+    <style>
+        /*  의사(가상)선택자
+
+            hover: 마우스 포인터가 요소 위에 위치
+            active: 사용자가 요소를 활성화(ex. mouse click)
+            focus: 요소가 포커스를 받고 있다 (ex. input과같은 텍스트 area에서 커서 깜빡이는상태)
+            disabled: 비활성 상태의 요소 (ex. )
+            nth-child(): 형제사이에서의 순서에 따라 요소 선택
+
+            의사요소(pseudo-elements) 선택자에 추가하는 키워드
+            요소의 특정부분에 대한 스타일 정의
+            선택자::의사요소{속성명: 속성값;}
+
+            after: 요소의 앞에 의사요소를 생성 및 추가
+            before: 요소의 뒤에 의사요소를 생성 및 추가
+            first-line: 블록레벨 요소의 첫번째 선에 스타일 적용
+            marker: 목록 기호의 스타일 적용 
+            placeholder: 입력요소의 플레이스홀더(자리표시자) 스타일 적용
+         */
+
+         .menu{
+            padding: 10px;
+            border-bottom: 1px solid black;
+         }
+
+         .menu > li{
+            display: inline-block;
+            text-align: center;
+         }
+
+         li > a{
+            display: inline-block;
+            width: 80px;
+            padding: 10px;
+            text-decoration: none;
+         }
+
+         a:hover{
+            color: white;
+            background-color: gray;
+         }
+         
+         a:active{
+            color: white;
+            background-color: black;
+         }
+
+        li:nth-child(2n-1){
+            font-size: 20px;
+        }
+
+        a::after{
+            content: "보기";
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="#">사전</a></li>
+        <li><a href="#">뉴스</a></li>
+        <li><a href="#">증권</a></li>
+        <li><a href="#">지도</a></li>
+    </ul>
+</body>
+</html>

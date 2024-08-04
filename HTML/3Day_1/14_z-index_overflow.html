@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index_overflow</title>
+</head>
+<style>
+    /* 
+    z-index는 포지션이 지정되지 않은 요소에 사용하지 않는다
+     */
+    div{
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+    .div1{background-color: orange; z-index: 4; 
+        overflow: scroll;
+        /* visible(디폴트), hidden, scroll, auto, */
+    }
+    .div2{background-color: red; bottom: 50px;  z-index: 3}
+    .div3{background-color: purple; bottom: 100px; z-index: 2}
+    .div4{background-color: greenyellow; bottom: 150px;  z-index:1}
+</style>
+<body>
+    <div class="div1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora non repellat soluta, veniam repudiandae voluptas! Fuga quidem voluptates aut, dolor vitae repudiandae nulla, dolores, rerum velit corrupti odio necessitatibus enim. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa iure nulla nobis repellendus recusandae voluptas nisi veniam mollitia aliquid, hic commodi incidunt sequi voluptatem labore qui libero fugiat? Itaque, maiores! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus amet corrupti minima porro aliquid, placeat itaque labore, accusamus veniam omnis laboriosam eveniet ad ducimus quibusdam exercitationem in. Dolore, maiores ipsam?
+    </div>
+    <div class="div2">2</div>
+    <div class="div3">3</div>
+    <div class="div4">4</div>
+    
+</body>
+</html>

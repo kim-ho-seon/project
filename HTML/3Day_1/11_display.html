@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+</head>
+<style>
+    /*
+     inline 넓이와 높이 지정 불가
+    inline-block 인라인 속성(요소의 공간차지는 필요한만큼)을 지니지만, 넓이와 높이 지정 가능
+    옆으로 이어지는 100X100 
+    block 넒이를 전제 가지기 위하여 마진을 확장(자동 설정)한다
+    */
+    p{
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+    span{display: block;}
+
+</style> 
+<body>
+    <p>요소1</p>
+    <p>요소2</p>
+    <p>요소3</p>
+    <p>요소4</p>
+    <span>요소5</span>
+</body>
+</html>

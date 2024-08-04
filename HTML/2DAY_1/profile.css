@@ -1,0 +1,41 @@
+*{
+    text-align: center; margin: 0 auto;
+    color: #ddd;
+}
+
+html{
+    background-color: #222;
+}
+
+body{
+    width: 640px;   
+}
+
+img{ 
+    border-radius: 50%;
+}
+
+h1{
+  font: normal 70px  'Henny Penny'; 
+  color:#9471e4;
+  margin-top: 40px;
+}
+
+h3{
+    margin: 20px 0;
+}
+
+p{
+    line-height: 30px;
+}
+
+ul li{
+    text-align: left; 
+}
+
+hr{margin-top: 20px;}
+
+#copy{
+    text-align: right;
+} 
+

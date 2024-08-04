@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        /* 
+            기호와 함께 사용하는 속성 선택자
+            *: 값의 포함 여부
+            ^: 값의 시작 여부
+            s: 값의 끝 여부
+
+            선택자
+            띄어쓰기 : 모든 자손들
+            > : 직계자식
+            + : 인접형제선택자
+            ~ : 전체형제선택자
+            형제선택자는 뒤이어 등장하는 형제들을 대상으로 한다
+        */
+        [alt]{
+            /* 속성만으로도 선택자 지정 가능  */
+            border: 5px dashed red;
+        }
+        [width *='2']{
+            /* 속성만으로도 선택자 지정 가능  */
+            border: 5px dashed red;
+        }
+        body p{
+            color: aqua;
+        }
+        p > em {
+            color: blue;
+        }
+        #sam + p{
+            color: orange;
+        }
+        #sam ~ div{
+            color: cadetblue;
+        }
+        /* 
+            앞에 있는 선택자는 포함되지 않는다
+        */
+        #sam ~ img{
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <img src="images//work07.jpg" width="120" alt="대전">
+    <img src="images//work07.jpg" width="120"> 
+    <img src="images//work07.jpg" width="120" id="sam">
+    <p>대전은 유노코딩 고향이자, 현 거주지이기도 합니다.</p>
+    <p>대전광역시 유성구에는 대펀의 랜드마크 한빛탑이 있습니다.</p>
+    <p>한빛탑 맞은 편에는 <em>엑스포다리</em>가 놓여 있습니다.</p>
+    <p>액스포 다리 아래에는 대전 3대하천 중 하나인 갑천이 흐릅니다.</p>
+    <div>형제선택자 예시1</div>
+    <div>형제선택자 예시2</div>
+    <div>형제선택자 예시3</div>
+</body>
+</html>

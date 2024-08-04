@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: 40px;
+        }
+        body
+        {margin: 0; padding: 0;}
+        ul{
+            display: flex;
+            /* display: inline-flex; 차이점확인 */
+            list-style: none;
+            padding: 0;
+            height: 200px;
+            border: 5px solid red;
+                
+        }
+        li{
+            border: 5px solid plum;
+            background-color: aquamarine;
+            height: 100px; 
+        }
+        li:nth-child(2n){
+            background-color: lightgoldenrodyellow;
+        }
+
+        /* 늘어나는 상황에서 but 기존값보다 작아질 때는 작용 X */
+        /* li:nth-child(2){
+            flex-grow: 1;
+        }
+        li:nth-child(3){
+            flex-grow: 2;
+        } */
+        
+        /* 줄어드는 상황에서 더 줄어드는 크기 기존값보다 커질 때는 작용 X*/
+        li:nth-child(2){ flex-shrink: 2;}
+        li:nth-child(3){flex-shrink: 3;}
+
+
+    </style>
+    <body>
+        <ul>
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <li>box4</li>
+            <li>box5</li>
+        </ul>
+        
+    </body>
+    </html>

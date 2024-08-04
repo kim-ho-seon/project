@@ -1,0 +1,109 @@
+
+/* resat */
+*{
+    margin: 0 auto; padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+    
+
+}
+/* 모자, 몸통 세로정렬 */
+#snowman{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh
+}
+
+
+/* swow 몸통*/
+.snow{
+    position: relative;
+    background: linear-gradient( 190deg, #ddd, #fff
+    );
+    border-radius:  50%;}
+#snow1{
+    width: 100px; height: 100px;
+    z-index: 5;
+}
+#snow2{
+    top: -20px;
+    width: 130px; height: 130px;
+    z-index: 3;
+}
+#snow3{
+    top: -40px;
+    width: 160px; height: 160px;
+    border-radius:  50%;
+    
+}
+
+/* face */
+#face{
+    margin-top:30px;
+    display: flex;
+    padding-top: 25px;
+    width: 80px; height: 50px;
+    position: relative;
+}
+.eye{
+    background-color: #000;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+}
+.eye:nth-child(2){ order: 3;}
+.mouth{
+    width: 25px; height: 10px;
+    background-color: burlywood;
+    border-radius: 0 0 0 8px;
+    position: absolute;
+    left: 15px; top: 35px;
+}
+
+/* hat */
+#hat{
+    position: relative;
+    transform: rotate( 15deg);
+    z-index: 50; left: 15px; top: 25px;
+
+}
+.hat1{
+    width: 60px; height: 60px;
+    background-color: #000;
+    border-radius: 10px 10px 0 0;
+}
+.hat2{
+    width: 100px; height: 15px;
+    background-color: #000;
+    border-radius: 0 0 10px 10px;
+}
+
+/* arms */
+#arms{ position: relative;}
+.arm1{
+    position: absolute;
+    width: 3px; height: 60px; 
+    background-color: rgb(92, 67, 37);
+    border-radius: 3px;
+    transform: rotate(-35deg);
+}
+.arm2{
+    position: absolute; right: 0;
+    width: 3px; height: 60px; 
+    background-color: rgb(92, 67, 37);
+    border-radius: 3px;
+    transform: rotate(35deg)
+}
+
+/* button */
+.button{    
+    background-color: #000;
+    width: 10px; height: 10px; margin-bottom: 10px;
+    border-radius: 50%;
+    position: relative;
+    top: 30px;
+}

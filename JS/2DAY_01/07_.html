@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const dog = '강아지'
+        const cat = '고양이'
+        // 타입확인 string
+        console.log(typeof dog)
+        console.log(typeof cat)
+
+        //데이터삽입
+        const modifier = '귀여운'
+        //&{}플레이스홀더
+        //'' `` 안의 공백도 문자열에 포함
+        const prettyDog = `${modifier} ${dog}`
+        console.log(prettyDog)
+
+        const prettyPet = `${modifier} ${prompt('좋아하는동물은?') + '!'}`
+        console.log(prettyPet)
+      
+
+    </script>
+</body>
+</html>

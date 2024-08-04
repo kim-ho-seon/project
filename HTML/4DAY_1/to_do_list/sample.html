@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+     <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 할 일 목록을 담는 컨테이너 -->
+    <div class="todo-container">
+        <div class="todo-header">Todo List</div>
+        
+        <!-- 입력 필드와 추가 버튼을 포함하는 컨테이너 -->
+        <div class="todo-input-container">
+            <input type="text" class="todo-input" placeholder="Add a new task">
+            <button class="todo-add-btn">Add</button>
+        </div>
+        
+        <!-- 할 일 목록을 표시하는 리스트 -->
+        <ul class="todo-list"></ul>
+    </div>
+
+    <script>
+        // 'Add' 버튼 클릭 이벤트 핸들러를 등록
+        document.querySelector('.todo-add-btn').addEventListener('click', function() {
+            const input = document.querySelector('.todo-input'); 
+            const task = input.value.trim(); // 입력된 값에서 공백을 제거
+            if (task) { // 입력 값이 비어 있지 않으면
+                addTodoItem(task); // 새로운 할 일 항목을 추가
+                input.value = ''; // 입력 필드를 초기화
+                input.focus(); // 입력 필드에 포커스를 설정
+            }
+        });
+
+        // 새로운 할 일 항목을 추가하는 함수
+        function addTodoItem(task) {
+            const todoList = document.querySelector('.todo-list'); // 할 일 목록을 참조
+            const todoItem = document.createElement('li'); // 새로운 리스트 항목을 생성
+            todoItem.classList.add('todo-item'); // 항목에 클래스 추가
+
+            const todoText = document.createElement('span'); // 텍스트를 표시할 스팬 요소 생성
+            todoText.classList.add('todo-text'); 
+            todoText.textContent = task; 
+
+            const deleteBtn = document.createElement('button'); // 삭제 버튼 생성
+            deleteBtn.classList.add('todo-delete-btn'); // 버튼에 클래스 추가
+            deleteBtn.textContent = 'Delete'; // 버튼 텍스트 설정
+            // 삭제 버튼 클릭 이벤트 핸들러를 등록
+            deleteBtn.addEventListener('click', function() {
+                todoItem.classList.add('slide-out'); // 슬라이드 아웃 애니메이션 클래스 추가
+                todoItem.addEventListener('animationend', function() {
+                    todoItem.remove(); // 애니메이션 종료 후 항목 제거
+                });
+            });
+
+            // 할 일 항목에 텍스트와 삭제 버튼을 추가
+            todoItem.appendChild(todoText);
+            todoItem.appendChild(deleteBtn);
+            // 할 일 목록에 새로운 항목 추가
+            todoList.appendChild(todoItem);
+        }
+    </script>
+</body>
+</html>

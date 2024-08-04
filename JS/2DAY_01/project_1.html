@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <style>
+        *{
+            font-size: 48px;
+            font-weight: 900;
+        }
+        #color{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 id="name"></h1>
+    <p id="age"></p>
+    <p id="color"></p>
+<script>
+    const nameElement = document.querySelector('#name')
+    let name = prompt('당신의 이름은?')
+    nameElement.textContent = `저의 이름은 ${name}입니다.`
+
+    const ageElement = document.querySelector('#age')
+    let age = prompt('당신의 나이는?')
+    ageElement.textContent = `당신의 나이는 ${age}입니다.`
+    
+    const colorElment = document.querySelector('#color')
+    let color = prompt('좋아하는 색깔은?')
+    colorElment.textContent = `좋아하는 색깔은 ${color}입니다.`
+
+    let answer =confirm('취소나 확인을 눌러보시겠습니까?')
+
+    console.log(typeof color)
+
+    console.log(answer)
+</script>
+    
+
+</body>
+</html>

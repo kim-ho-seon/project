@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="repeat"></p>
+    <!--<p id="name"></p>-->
+    <script>
+        const repeatElement = document.querySelector('#repeat')
+        //const nameElement = document.querySelector('#name')
+        /*let check = confirm('페이지를 업데이트 하시겠습니까?')
+        console.log(check)
+        const repeatElement = document.querySelector('#repeat')
+        repeatElement.textContent = `페이지가 업데이트되었습니다!`
+        */
+        
+        if(confirm('페이지를 업데이트 하시겠습니까?')){
+            
+            const name =prompt('사용자 이름을 입력해 주세요')
+            repeatElement.textContent=`안녕하세요, ${name} 님!`
+            repeatElement.textContent = `페이지가 업데이트되었습니다!`
+        }else{
+            repeatElement.textContent = `페이지가 업데이트가 취소되었습니다!`
+        }
+        
+        var i = 0;
+        
+        for(const i=2; i< 9; i++){
+            for(const = j; i< 9; j++){
+                console.log(i + "*" + j + "=" + i*j)
+            }
+        }
+
+        // if(confirm('페이지를 업데이트 하시겠습니까?')){
+            
+        //     const name =prompt('사용자 이름을 입력해 주세요')
+        //     document.querySelector('#repeat').textContent = `페이지가 업데이트되었습니다!`
+        //     repeatElement.textContent=`안녕하세요, ${name} 님!`
+        // }else{
+        //     repeatElement.textContent = `페이지가 업데이트가 취소되었습니다!`
+        // }
+
+
+        // let check = confirm('페이지를 업데이트 하시겠습니까?')
+        
+        // if(check){
+        //      repeatElement.textContent = `페이지가 업데이트가 되었습니다!`
+        //     const name = prompt('사용자 이름을 입력해 주세요')
+
+        //     repeatElement.textContent = `안녕하세요, ${name} 님!`
+        // }else{
+        //     repeatElement.textContent = `페이지가 업데이트가 취소되었습니다!`
+        // }
+
+
+    </script>
+</body>
+</html> 

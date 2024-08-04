@@ -1,0 +1,47 @@
+.chat-screen_texts{
+    padding: 0;
+    list-style-type: none;
+    
+}
+
+.chat-screen_texts > .text{
+    background-color: rgb(237, 252, 247);
+    width: calc(70%);
+     height: 50px;
+    margin: 0 0 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    line-height: 30px;
+    position: relative;
+    left: 20px;
+    /* 전체 50 - 위, 아래 패딩 10 */
+}
+
+.chat-screen_texts > .text::after{
+    content: '';
+    border-right: 16px solid  rgb(237, 252, 247);
+    border-bottom: 16px solid transparent;
+    position: absolute;
+    top: 10px; left: -10px;
+}
+
+.chat-screen_texts > .text:hover{
+    background-color: rgb(161, 255, 224);
+    transition: background-color 1500ms 200ms ease-in;
+}
+
+.chat-screen_texts > .text:hover::after{
+    border-right: 16px solid   rgb(161, 255, 224);
+    transition: border-right 1500ms 200ms ease-in;
+}
+
+.text{
+    overflow: hidden;
+    text-align: justify;
+    text-overflow: ellipsis;
+}
+
+.chat-screen{
+    max-height: calc(100%-120px);
+    overflow-y: auto;
+}

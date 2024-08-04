@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* transform */
+    
+        #transform .parent{
+            margin: 0 20px;
+            display: inline-block;
+        }
+        #transform .child{
+            margin: 50px;
+            width: 150px;
+            height: 150px;background-color: aquamarine;
+        }
+    
+        #transform .parent:nth-child(1) > .child{
+            transform: translate(30px, 50px);
+        }
+        #transform .parent:nth-child(2) > .child{
+            transform: scale(1.2, .8);
+        }
+        #transform .parent:nth-child(3) > .child{
+            transform: skew(45deg);
+        }
+        #transform .parent:nth-child(4) > .child{
+            transform: rotate(65deg);
+        }
+    
+    
+    </style>
+</head>
+<style>
+
+    /* transform */
+
+    #transform .parent{
+        margin: 0 20px;
+        display: inline-block;
+    }
+    #transform .child{
+        margin: 50px;
+        width: 150px;
+        height: 150px;background-color: aquamarine;
+    }
+
+    #transform .parent:nth-child(1) > .child{
+        transform: translate(30px, 50px);
+    }
+    #transform .parent:nth-child(2) > .child{
+        transform: scale(1.2, .8);
+    }
+    #transform .parent:nth-child(3) > .child{
+        transform: skew(45deg);
+    }
+    #transform .parent:nth-child(4) > .child{
+        transform: rotate(65deg);
+    }
+
+
+</style>
+<body>
+    <div id="transform">
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: 40px;
+        }
+        body
+        {margin: 0; padding: 0;}
+        ul{
+            display: flex;
+            /* display: inline-flex; 차이점확인 */
+            list-style: none;
+            padding: 0;
+            height: 200px;
+            border: 5px solid red;
+                
+        }
+        li{
+            border: 5px solid plum;
+            background-color: aquamarine;
+            height: 100px; 
+        }
+
+        li:nth-child(2n){
+            background-color: lightgoldenrodyellow;
+        }
+
+          
+       
+    </style>
+    <body>
+        <ul>
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <li>box4</li>
+            <li>box5</li>
+        </ul>
+        
+    </body>
+    </html>

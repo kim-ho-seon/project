@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+</head>
+<style>
+    .container{
+        height: 800px;
+        border: 1px solid black;
+    }
+    #first{
+        float: right;
+    }
+    #second{
+        float: left;
+    }
+    p{
+        clear: both;
+    }
+</style>
+
+<body>
+    <!-- 
+    요소의 진행방향은 왼쪽에서 오른쪽 but 
+ float 속성은 상위요소의 왼쪽 or 오른쪽에 붙는 형태로 재배치
+ 이때, float을 지정 하지 않은 요소에 영향을 미치므로 clear 속성을 지정한다 
+ -->
+ <div class="container">
+    <img src="images/work07.jpg" alt="" id="first">
+    <img src="images/work07.jpg" alt="" id="second">
+    <p>
+        대전은 대한민국의 광역시이며, 남한의 중앙에 위치해있다. 순우리말 이름은 '한밭'인데, 이 이름은 대전 내 지명 등에 많이 쓰이고 있다.
+    </p>
+ </div>
+    
+</body>
+</html>

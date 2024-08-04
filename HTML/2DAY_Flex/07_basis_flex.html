@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: 40px;
+        }
+        body
+        {margin: 0; padding: 0;}
+        ul{
+            display: flex;
+            /* display: inline-flex; 차이점확인 */
+            list-style: none;
+            padding: 0;
+            height: 200px;
+            border: 5px solid red;
+                
+        }
+        li{
+            border: 5px solid plum;
+            background-color: aquamarine;
+            height: 100px; 
+        }
+
+        li:nth-child(2n){
+            background-color: lightgoldenrodyellow;
+        }
+
+
+        /* 기본 크기가 더 큰 3th가 더 많이 줄어든다*/
+        /* li:nth-child(2){
+            flex-basis: 100px;
+            flex-shrink: 2;
+        }
+        li:nth-child(3){
+            flex-basis: 200px;
+            flex-shrink: 3;
+        } */
+
+        li:nth-child(2){
+            flex: 0 0 100px; 
+            /* 늘어나지도 줄어들지도 않는다 */
+        }
+
+        li:nth-child(2){
+            flex: 0 1 100px; 
+            /* 축소비 있는 1  축소 가능 확대 X */
+        }
+                
+        li:nth-child(2){
+            flex: 1 1 100px; 
+            /* 여분은 다 차치 축소비 있는 1  축소 가능 */
+        }
+    </style>
+    <body>
+        <ul>
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <li>box4</li>
+            <li>box5</li>
+        </ul>
+        
+    </body>
+    </html>
