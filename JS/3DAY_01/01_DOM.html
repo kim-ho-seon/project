@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="song-title" class="heading" title="VOS의 2019년 발매곡">
+        <span>다시 만날까 봐</span>
+    </h1>
+    <p class="lyrics">
+        인스타로 몰래 보는 너의 하루들 누가 봐도 헤어진 티를 내
+    </p>
+    <p class="lyrics">
+        팔로우 다 끊고서 좋아요는 왜 눌렀니 (ㅋㅋ)
+    </p>
+
+    <script>
+        // 메소드는 요소를 선택
+        console.log(document.querySelectorAll('.lyrics'))
+        // querySelectorAll 로 선택하면 여러가지를 선택한 후 제어 가능
+        console.log(document.getElementsByClassName('lyrics'))
+        // const title = console.log(document.getElementById('song-title'))
+        const title = document.getElementById('song-title')
+        console.log(title)
+        // 코드상의 공백 포함 텍스트콘텐츠 콩백X텍스트만포함 이너텍스트
+        console.log(title.textContent)
+        console.log(title.innerText)
+        console.log(title.className)
+        console.log(title.style)
+        // 스타일을 따로 지정하지 않으면, 항목들만 나열됨
+        console.log(title.title)
+        // 타이틀은 가지고 있는 요소를 확인
+
+    </script>
+</body>
+</html>

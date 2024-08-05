@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        //  프롬프트는 문자열로 입력받은 값을 처리
+        // window.parseInt()parseInt는 JavaScript에서 문자열을 정수로 변환할 때 사용하는 함수
+        let age = parseInt(prompt('당신의 나이는?'))
+        console.log(age)
+        console.log(typeof  age)
+        console.log(20 < age)
+        console.log(20 <= age)
+        console.log(20 == age)
+        // 엄격한 비교 값이 같고, 자료형 까지 같아야 ===
+        // parseInt 지우면 == 자료형은 다름
+        console.log(20 === age)
+        document.write(`<br>당신의 나이는 20살인가? ${'20' == age}`)
+        
+        let name = prompt ('당신의 이름은?')
+        // DOM에서 처리하여 화면상으로 나타냄
+        // document.write(name)
+        // document.write('호도닝' === name)
+
+        document.write(`<br>사용자의 이름은 ${name}입니다`)
+        document.write(`<br>우리가 찾던 사람인가? ${'호도닝' === name}`)
+
+
+    </script>
+    
+</body>
+</html>
